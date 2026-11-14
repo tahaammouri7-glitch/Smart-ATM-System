@@ -943,68 +943,6 @@ void userDashboard(Account accounts[], int count, int userIndex)
     } while (choice != 0);
 }
 
-/* ================= MAIN MENU ================= */
-
-void mainMenu(Account accounts[], int *count)
-{
-    int choice;
-    int userIndex;
-
-    do
-    {
-        printf("\n====================================\n");
-        printf("          SMART ATM SYSTEM          \n");
-        printf("====================================\n");
-
-        printf("1. Connexion Utilisateur\n");
-        printf("2. Connexion Administrateur\n");
-        printf("3. Creer un compte\n");
-        printf("4. A propos\n");
-        printf("0. Quitter\n");
-
-        printf("====================================\n");
-
-        choice = readInt("Votre choix : ", 0, 4);
-
-        switch (choice)
-        {
-        case 1:
-            userIndex = login(accounts, *count);
-
-            if (userIndex != -1)
-            {
-                userDashboard(accounts, *count, userIndex);
-            }
-            break;
-
-        case 2:
-            if (ownerLogin())
-            {
-                ownerDashboard(accounts, count);
-            }
-            break;
-
-        case 3:
-            createAccount(accounts, count);
-            break;
-
-        case 4:
-            printf("\nSMART ATM SYSTEM\n");
-            printf("Projet realise en langage C.\n");
-            printf("Systeme bancaire educatif en mode terminal.\n");
-            printf("Version 1.0\n");
-            break;
-
-        case 0:
-            saveAccounts(accounts, *count);
-            printf("\nMerci d'avoir utilise SMART ATM SYSTEM.\n");
-            printf("Au revoir !\n");
-            break;
-        }
-
-    } while (choice != 0);
-}
-
 /* ================= MAIN FUNCTION ================= */
 
 int main(void)
