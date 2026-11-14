@@ -1,0 +1,9 @@
+# Executable files
+*.exe
+
+# Local ATM data
+accounts.dat
+transactions.dat
+
+# Temporary files
+*.tmp
