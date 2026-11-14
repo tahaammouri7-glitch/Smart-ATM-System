@@ -2,6 +2,10 @@
 
 A console-based ATM management system developed using the C programming language.
 
+## 🖥️ Application Preview
+
+![Smart ATM System](screenshots/atm-home.png)
+
 ## 📌 Description
 
 Smart ATM System is a C programming project that simulates the basic operations of an Automated Teller Machine (ATM).
