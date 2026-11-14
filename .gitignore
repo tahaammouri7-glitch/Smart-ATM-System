@@ -7,3 +7,8 @@ transactions.dat
 
 # Temporary files
 *.tmp
+# Fichiers confidentiels
+admin.txt
+accounts.dat
+accounts.tmp
+accounts.bak
